@@ -98,7 +98,3 @@ src/main/resources/
 6. **Print Checklist** - prints the required document checklist, with the results shown in the CLI.
 7. **NGO Assistance** - request help applying; recorded against the household for Admin to follow up
 8. **Admin Panel** - view registered households, manage FAQs
-
-## AI Summary
-
-AI was used throughout the development of this project mainly for coding assistance, debugging, and improving the implementation. I used AI to help write and modify ScalaFX UI code, fix build.sbt and ScalaFX setup issues, debug errors, and improve navigation and UI behaviour. I also used AI to troubleshoot problems such as the household form losing entered data and errors caused by the order of function definitions. I did not use AI to decide the main system idea, user flow, data model, UML design, or subsidy eligibility rules. I reviewed and modified the AI-generated code before using it in the project. All AI-assisted code is marked with // ai-assisted: #N and linked to the corresponding entry in ai/interaction_log.md.
