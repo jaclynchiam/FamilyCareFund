@@ -1,0 +1,92 @@
+[
+  {
+    "userId": "98c54c5b",
+    "fullName": "chiam Jie Zu",
+    "email": "chiam@gmail.com",
+    "username": "chiam",
+    "password": "chiam9999",
+    "phoneNumber": "0164429427",
+    "householdId": "98c54c5b"
+  },
+  {
+    "userId": "1b763b67",
+    "fullName": "James",
+    "email": "james@gmail.com",
+    "username": "jjames",
+    "password": "Chiam9999",
+    "phoneNumber": "016-334-2242",
+    "householdId": "1b763b67"
+  },
+  {
+    "userId": "5b22312d",
+    "fullName": "Jack",
+    "email": "jacksonwong@gmail.com",
+    "username": "jacksonwong",
+    "password": "Chiam9999",
+    "phoneNumber": "0164429873",
+    "householdId": "5b22312d"
+  },
+  {
+    "userId": "fabe5a59",
+    "fullName": "jack",
+    "email": "j@gmail.com",
+    "username": "jack",
+    "password": "12345678",
+    "phoneNumber": "0123345321",
+    "householdId": "fabe5a59"
+  },
+  {
+    "userId": "5a31855e",
+    "fullName": "a",
+    "email": "a@gmail.com",
+    "username": "a",
+    "password": "111",
+    "phoneNumber": "01323223424",
+    "householdId": "5a31855e"
+  },
+  {
+    "userId": "127aeb88",
+    "fullName": "Jach Chiam",
+    "email": "jach@gmail.com",
+    "username": "chiamj",
+    "password": "Chiam1234",
+    "phoneNumber": "0123456421",
+    "householdId": "127aeb88"
+  },
+  {
+    "userId": "4baec53a",
+    "fullName": "Sam",
+    "email": "samlin@gmail.com",
+    "username": "samlin",
+    "password": "1234",
+    "phoneNumber": "0142232342",
+    "householdId": "4baec53a"
+  },
+  {
+    "userId": "362b260c",
+    "fullName": "Tan Jia Xiang",
+    "email": "jx@gmail.com",
+    "username": "jx",
+    "password": "9876",
+    "phoneNumber": "0231232847",
+    "householdId": "362b260c"
+  },
+  {
+    "userId": "39a35879",
+    "fullName": "Jay",
+    "email": "jay@gmail.com",
+    "username": "jay",
+    "password": "9999",
+    "phoneNumber": "0123432353",
+    "householdId": "39a35879"
+  },
+  {
+    "userId": "9db8526f",
+    "fullName": "Jamesss",
+    "email": "james@gmail.com",
+    "username": "jamess",
+    "password": "Chiam9999",
+    "phoneNumber": "0162452356",
+    "householdId": "9db8526f"
+  }
+]
