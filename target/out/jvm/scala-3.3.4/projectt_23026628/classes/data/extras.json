@@ -1,0 +1,58 @@
+[
+  {
+    "username": "chiam",
+    "vehicleOwnership": "No",
+    "receivesFinancialAssistance": false,
+    "assistanceType": [],
+    "savingsRange": "RM1,000-RM4,999",
+    "hasDisability": false,
+    "needsCare": false
+  },
+  {
+    "username": "jacksonwong",
+    "vehicleOwnership": "Car",
+    "receivesFinancialAssistance": true,
+    "assistanceType": [],
+    "savingsRange": "Prefer not to say",
+    "hasDisability": false,
+    "needsCare": false
+  },
+  {
+    "username": "a",
+    "vehicleOwnership": "No",
+    "receivesFinancialAssistance": false,
+    "assistanceType": [],
+    "savingsRange": "Prefer not to say",
+    "hasDisability": true,
+    "needsCare": true
+  },
+  {
+    "username": "jx",
+    "vehicleOwnership": "No",
+    "receivesFinancialAssistance": false,
+    "assistanceType": [],
+    "savingsRange": "RM1,000-RM4,999",
+    "hasDisability": false,
+    "needsCare": false
+  },
+  {
+    "username": "jay",
+    "vehicleOwnership": "No",
+    "receivesFinancialAssistance": false,
+    "assistanceType": [],
+    "savingsRange": "RM1,000-RM4,999",
+    "hasDisability": false,
+    "needsCare": false
+  },
+  {
+    "username": "jamess",
+    "vehicleOwnership": "No",
+    "receivesFinancialAssistance": true,
+    "assistanceType": [
+      "Allowance"
+    ],
+    "savingsRange": "RM1,000-RM4,999",
+    "hasDisability": false,
+    "needsCare": false
+  }
+]

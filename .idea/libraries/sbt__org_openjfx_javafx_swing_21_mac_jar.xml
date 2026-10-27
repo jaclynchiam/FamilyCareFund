@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sbt: org.openjfx:javafx-swing:21:mac:jar" type="java-imported" external-system-id="SBT">
+    <properties groupId="org.openjfx" artifactId="javafx-swing" version="21" baseVersion="21" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/openjfx/javafx-swing/21/javafx-swing-21-mac.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

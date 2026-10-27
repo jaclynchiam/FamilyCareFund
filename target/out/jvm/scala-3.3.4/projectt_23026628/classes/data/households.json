@@ -1,0 +1,128 @@
+[
+  {
+    "householdId": "5b22312d",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "Jack",
+        "age": 30,
+        "relationship": "Self",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 2000,
+        "dependent": false
+      }
+    ],
+    "isSingleParent": true,
+    "needsNgoAssistance": false,
+    "additionalPropertyCount": 2
+  },
+  {
+    "householdId": "5a31855e",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "a",
+        "age": 20,
+        "relationship": "Self",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 200,
+        "dependent": false
+      }
+    ],
+    "isSingleParent": false,
+    "needsNgoAssistance": false,
+    "additionalPropertyCount": 0
+  },
+  {
+    "householdId": "362b260c",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "Tan Jia Xiang",
+        "age": 30,
+        "relationship": "Self",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 2500,
+        "dependent": false
+      }
+    ],
+    "isSingleParent": false,
+    "needsNgoAssistance": false,
+    "additionalPropertyCount": 0
+  },
+  {
+    "householdId": "39a35879",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "Jay",
+        "age": 40,
+        "relationship": "Self",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 1000,
+        "dependent": false
+      },
+      {
+        "name": "Teng Sok Pheng",
+        "age": 9,
+        "relationship": "Child",
+        "employmentStatus": "Student",
+        "monthlyIncome": 0,
+        "dependent": true
+      },
+      {
+        "name": "Shawn",
+        "age": 30,
+        "relationship": "Spouse",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 1500,
+        "dependent": false
+      }
+    ],
+    "isSingleParent": false,
+    "needsNgoAssistance": true,
+    "additionalPropertyCount": 0
+  },
+  {
+    "householdId": "98c54c5b",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "chiam Jie Zu",
+        "age": 9,
+        "relationship": "Self",
+        "employmentStatus": "Self-employed",
+        "monthlyIncome": 1000,
+        "dependent": true
+      }
+    ],
+    "isSingleParent": false,
+    "needsNgoAssistance": true,
+    "additionalPropertyCount": 0
+  },
+  {
+    "householdId": "9db8526f",
+    "housingStatus": "Renting",
+    "members": [
+      {
+        "name": "Jamesss",
+        "age": 30,
+        "relationship": "Self",
+        "employmentStatus": "Employed",
+        "monthlyIncome": 2000,
+        "dependent": false
+      },
+      {
+        "name": "Jackson Wong",
+        "age": 9,
+        "relationship": "Child",
+        "employmentStatus": "Student",
+        "monthlyIncome": 0,
+        "dependent": true
+      }
+    ],
+    "isSingleParent": false,
+    "needsNgoAssistance": true,
+    "additionalPropertyCount": 0
+  }
+]

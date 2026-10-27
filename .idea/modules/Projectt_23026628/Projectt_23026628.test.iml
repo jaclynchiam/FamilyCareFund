@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="root:test [file:///Users/jaclynchiam/IdeaProjects/Projectt_23026628/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
+  <component name="DisplayModuleName">
+    <option name="name" value="Projectt_23026628.test" />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_26">
+    <output-test url="file://$MODULE_DIR$/../../../target/out/jvm/scala-3.3.4/projectt_23026628/test-classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/scala" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../target/out/jvm/scala-3.3.4/projectt_23026628/resource_managed/test" />
+    <content url="file://$MODULE_DIR$/../../../target/out/jvm/scala-3.3.4/projectt_23026628/src_managed/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: scala-sdk-3.3.4" level="project" />
+    <orderEntry type="module" module-name="Projectt_23026628.main" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala3-library_3:3.3.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalafx:scalafx_3:21.0.0-R32:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:upickle_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-base:21.0.2:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-controls:21.0.2:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-fxml:21.0.2:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-graphics:21.0.2:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.14:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-base:21.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-controls:21.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-fxml:21.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-graphics:21.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-media:21:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-swing:21:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-web:21:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:ujson_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:upack_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:upickle-implicits_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-media:21:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-swing:21:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-web:21:mac:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:upickle-core_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:geny_3:1.1.0:jar" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="Projectt_23026628.main" />
+</module>
