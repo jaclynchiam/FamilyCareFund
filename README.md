@@ -130,5 +130,4 @@ sbt test
 7. **NGO Assistance** - Submit a request for help with subsidy applications, which is recorded for Admin to follow up.
 8. **Admin Dashboard** - View registered households, check NGO assistance requests and manage FAQs.
 
-.com/jaclynchiam)-->
 
