@@ -1,101 +1,211 @@
-<!--# FamilyCareFund (Subsidy Eligibility Calculator)
+# FamilyCareFund (Subsidy Eligibility Calculator)
 
-A standalone ScalaFX desktop application supporting UN Sustainable Development Goal 1 (No Poverty).
-FamilyCareFund helps low-income households check their eligibility for six government subsidies,
-prepare the documents they need, and request help from NGO partners if they need assistance applying.
+<!--A standalone ScalaFX desktop application supporting UN Sustainable Development Goal 1 (No Poverty).
+FamilyCareFund helps low-income families check their eligibility for six government subsidies, view subsidy requirements, generate application checklists based on required documents, and request NGO assistance if they need help with the application process.-->
 
-## Project Summary
+FamilyCareFund is a desktop application developed to support UN Sustainable Development Goal 1 (No Poverty). It helps low-income families check their eligibility for six government subsidies, view subsidy requirements, generate application checklists, and request assistance from NGOs if they need help with the application process.
 
-Households register an account, then fill in their household information: themselves plus any other
-household members (age, employment status, monthly income, whether they are a dependent), housing
-situation, vehicle ownership, financial assistance status, savings range, and special circumstances
-(disability / care needs).
+---
 
-The system then checks this household against six subsidies:
+## Table of Contents
 
-- Cash Subsidy
-- Basic Needs Subsidy
-- Housing Subsidy
-- Education Subsidy
-- Senior Citizen Subsidy
-- Single-Parent Family Subsidy
+- [Background](#background)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [How to Use](#how-to-use)
+- [Data Storage](#data-storage)
+- [Eligibility Logic](#eligibility-logic)
+- [Screenshots](#screenshots)
+- [Limitations and Future Work](#limitations-and-future-work)
+- [Author](#author)
 
-Each subsidy is a `case object` extending the `Subsidy` sealed trait, and implements its own
-`isEligible` rule (see `models/Subsidy.scala`), using shared comparison logic from
-`models/EligibilityRules.scala`. This is the project's main demonstration of inheritance and subtype
-polymorphism.
+---
 
-After checking eligibility, the household can view details for any subsidy they qualify for
-(why they qualify, required documents, how to apply), generate and print an application checklist,
-or request NGO assistance if they need help applying.
+## Background
 
-Admin (a pre-seeded account, not self-registered) can view all registered households and manage FAQs.
+Many low-income households are entitled to government subsidies but never apply, either because they do not know the subsidies exist, are unsure whether they qualify, or find the application process confusing. FamilyCareFund addresses this by letting a household enter its details once, see which subsidies it is eligible for, understand exactly what to prepare, and ask an NGO for help if needed.
 
-## Requirements
+---
 
-- Scala 3.3+
-- sbt 1.9+
-- Java 17+ (JDK with JavaFX-compatible JVM)
+## Features
 
-## Setup & Run
+### 1. Household Information Management
+- Enter your own details (age, employment, income, etc.)
+- Add household members
+- Edit or remove members
+- Enter housing and financial information
+- Save the household information
 
-1. Unzip this project, keeping the folder structure intact.
-2. From the project root, run:
-   ```
-   sbt run
-   ```
-3. On first launch, the app seeds an admin account automatically:
-    - Username: `admin`
-    - Password: `1234`
-4. Households register their own account from the Login screen ("New user? Register").
+### 2. Subsidy Eligibility Checking
+- Click **Check My Eligibility**
+- Review the household information
+- Click **Confirm & Check Eligibility**
+- The system checks the household against all 6 subsidies
+- Each subsidy is shown as **Eligible** or **Not Eligible**
 
-Data is stored as JSON files under `src/main/resources/data/` (`users.json`, `households.json`,
-`extras.json`, `faqs.json`), created automatically the first time each is written to.
+### 3. Subsidy Information and Application Checklist
+- Browse the 6 available subsidies
+- Click a subsidy to view its:
+  - Description
+  - Benefits
+  - Eligibility criteria
+  - Required documents
+  - How to apply
+- For a subsidy the household is eligible for, generate an application checklist
 
-## Running Tests
+### 4. NGO Assistance and Admin Management
+- **User side:** submit an NGO assistance request. The NGO then contacts the household and helps with the application.
+- **Admin side:** log in to
+  - view registered households
+  - see each household's NGO assistance status (Requested / Not requested)
+  - manage FAQs
 
-```
-sbt test
-```
+---
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Language | Scala 3.3.4 |
+| UI | ScalaFX 21.0.0-R32 (on JavaFX 21.0.2) |
+| JSON | uPickle 3.3.1 |
+| Build tool | sbt |
+| Storage | Local JSON files |
+
+---
 
 ## Project Structure
 
 ```
-src/main/scala/
-├── Main.scala                    # ScalaFX entry point (JFXApp3) and every screen
-├── models/
-│   ├── User.scala                # abstract User (login, logout, email validation)
-│   ├── HouseholdUser.scala       # extends User - self-registers
-│   ├── Admin.scala               # extends User - pre-seeded, manages subsidies/FAQs/users
-│   ├── Household.scala           # income, housing, members, single-parent flag, etc.
-│   ├── HouseholdMember.scala     # one household member's details
-│   ├── HouseholdExtras.scala     # vehicle/savings/assistance info, linked to HouseholdUser
-│   ├── Subsidy.scala             # sealed trait + 6 concrete subsidies
-│   ├── EligibilityRules.scala    # shared eligibility check helpers
-│   ├── EligibilityChecker.scala  # runs a household against a list of subsidies
-│   ├── EligibilityResult.scala   # generic result wrapper (item, eligible, message)
-│   ├── ApplicationChecklist.scala
-│   ├── FAQ.scala
-│   └── Validatable.scala         # trait for self-validating models
-├── services/
-│   └── AuthService.scala         # login (Admin + HouseholdUser) and registration
-└── storage/
-    └── FileStorage.scala         # JSON persistence for users, households, extras, FAQs
-src/main/resources/
-└── data/                         # JSON data files (created automatically on first run)
-    ├── users.json
-    ├── households.json
-    ├── extras.json
-    └── faqs.json
+FamilyCareFund/
+├── build.sbt
+├── project/
+│   └── build.properties
+├── docs/
+└── src/
+    └── main/
+        ├── resources/
+        │   └── data/
+        │       ├── users.json
+        │       ├── households.json
+        │       ├── extras.json
+        │       └── faqs.json
+        └── scala/
+            ├── Main.scala
+            ├── models/
+            │   ├── Admin.scala
+            │   ├── ApplicationChecklist.scala
+            │   ├── EligibilityChecker.scala
+            │   ├── EligibilityResult.scala
+            │   ├── EligibilityRules.scala
+            │   ├── FAQ.scala
+            │   ├── Household.scala
+            │   ├── HouseholdExtras.scala
+            │   ├── HouseholdMember.scala
+            │   ├── HouseholdUser.scala
+            │   ├── Subsidy.scala
+            │   ├── User.scala
+            │   └── Validatable.scala
+            ├── services/
+            │   └── AuthService.scala
+            └── storage/
+                └── FileStorage.scala
 ```
 
-## Key Features
-1. **Register / Login** - household self-registration; Admin uses a fixed pre-seeded account
-2. **Household Information** - collect household member and household-wide details, with add/edit/remove for members
-3. **Eligibility Checker** - checks the household against all 6 subsidies and shows eligible vs not eligible
-4. **Subsidy Information** - browse all 6 subsidies (even ones the household doesn't qualify for), view details
-5. **Generate Checklist** - auto-generated from the required documents of an eligible subsidy
-6. **Print Checklist** - prints the required document checklist, with the results shown in the CLI.
-7. **NGO Assistance** - request help applying; recorded against the household for Admin to follow up
-8. **Admin Panel** - view registered households, manage FAQs
--->
+### Code organisation
+
+| Package / file | Responsibility |
+|----------------|----------------|
+| `Main.scala` | Application entry point and ScalaFX user interface |
+| `models/` | Domain classes: users, admins, households, members, subsidies, FAQs, and the eligibility logic |
+| `models/EligibilityChecker.scala`, `EligibilityRules.scala`, `EligibilityResult.scala` | Check a household against the subsidy rules and return the result |
+| `models/ApplicationChecklist.scala` | Builds the application checklist for an eligible subsidy |
+| `models/Validatable.scala` | Shared validation behaviour for input data |
+| `services/AuthService.scala` | Login and authentication for households and admins |
+| `storage/FileStorage.scala` | Reads and writes the JSON data files |
+| `resources/data/` | Persistent data: users, households, extra household information, and FAQs |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- **JDK 17 or later** (required by JavaFX 21)
+- **sbt** ([installation guide](https://www.scala-sbt.org/download.html))
+
+### Run the application
+
+```bash
+git clone https://github.com/jaclynchiam/FamilyCareFund.git
+cd FamilyCareFund
+sbt run
+```
+
+The first run downloads the dependencies, so it may take a few minutes. The build picks the correct JavaFX files for Windows, macOS or Linux automatically.
+
+---
+
+## How to Use
+
+1. **Register or log in** to your household account.
+2. **Fill in your household information:** your own details, then add each household member, and enter housing and financial information. Save when done.
+3. **Check eligibility:** click *Check My Eligibility*, review your information, then click *Confirm & Check Eligibility*.
+4. **Read the results:** each of the 6 subsidies is marked Eligible or Not Eligible.
+5. **View subsidy details** under *Subsidies*, and generate an application checklist for any subsidy you are eligible for.
+6. **Request NGO assistance** if you need help with an application.
+
+### Admin
+Log in with an admin account to view registered households, see who has requested NGO assistance, and manage FAQs.
+
+> **Admin login:** `[TODO: add default admin credentials, or explain how an admin account is created]`
+
+---
+
+## Data Storage
+
+FamilyCareFund stores its data in JSON files under `src/main/resources/data/`, handled by `FileStorage`:
+
+| File | Contents |
+|------|----------|
+| `users.json` | Registered user accounts |
+| `households.json` | Household details and members |
+| `extras.json` | Additional household information (e.g. housing and financial details) |
+| `faqs.json` | FAQs shown to users and managed by admins |
+
+`[TODO: confirm what each file stores, and whether passwords are hashed.]`
+
+---
+
+## Eligibility Logic
+
+Eligibility is decided by `EligibilityChecker`, which applies the criteria defined in `EligibilityRules` to the household's saved information and returns an `EligibilityResult` for each subsidy.
+
+| # | Subsidy | Key eligibility criteria |
+|---|---------|--------------------------|
+| 1 | `[TODO]` | `[TODO]` |
+| 2 | `[TODO]` | `[TODO]` |
+| 3 | `[TODO]` | `[TODO]` |
+| 4 | `[TODO]` | `[TODO]` |
+| 5 | `[TODO]` | `[TODO]` |
+| 6 | `[TODO]` | `[TODO]` |
+
+---
+
+## Screenshots
+
+`[TODO: add screenshots of the household form, eligibility results, subsidy details, and admin dashboard]`
+
+---
+
+
+---
+
+<!--## Author
+
+**Jaclyn**, Computer Science, Sunway University
+GitHub: [@jaclynchiam](https://github.com/jaclynchiam)-->
+
+
+
