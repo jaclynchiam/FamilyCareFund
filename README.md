@@ -202,10 +202,9 @@ Eligibility is decided by `EligibilityChecker`, which applies the criteria defin
 
 ---
 
+
 <!--## Author
 
 **Jaclyn**, Computer Science, Sunway University
 GitHub: [@jaclynchiam](https://github.com/jaclynchiam)-->
-
-
 
