@@ -1,8 +1,8 @@
 # FamilyCareFund (Subsidy Eligibility Calculator)
 
 A standalone ScalaFX desktop application supporting UN Sustainable Development Goal 1 (No Poverty).
-FamilyCareFund helps low-income households check their eligibility for six government subsidies,
-prepare the documents they need, and request help from NGO partners if they need assistance applying.
+FamilyCareFund helps low-income families check their eligibility for six government subsidies, view subsidy requirements, generate application checklists based on required documents, and request NGO assistance if they need help with the application process.
+
 
 ## Project Summary
 
