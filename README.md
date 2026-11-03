@@ -11,8 +11,7 @@ household members (age, employment status, monthly income, whether they are a de
 situation, vehicle ownership, financial assistance status, savings range, and special circumstances
 (disability / care needs).
 
-The system then checks this household against six subsidies:
-
+The system then uses the household information to calculate eligibility for six government subsidies:
 - Cash Subsidy
 - Basic Needs Subsidy
 - Housing Subsidy
