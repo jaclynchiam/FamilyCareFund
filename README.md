@@ -24,7 +24,7 @@ After checking eligibility, the household can view details for any subsidy they 
 (why they qualify, required documents, how to apply), generate and print an application checklist,
 or request NGO assistance if they need help applying.
 
-Admin can log in using the built-in admin account to view registered households, check NGO assistance requests and manage FAQs.
+Admin can log in using the built-in admin account to view registered households, check NGO assistance requests and manage FAQs (add, edit, and delete).
 
 ## Tech Stack
 
